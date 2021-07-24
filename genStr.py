@@ -19,7 +19,6 @@ bot = Bot()
 
 API_TEXT = """Hi {}
 Welcome to Pyrogram's `HU_STRING_SESSION` generator Bot.
-
 `Send your API_ID to Continue.`"""
 HASH_TEXT = "`Send your API_HASH to Continue.`\n\nPress /cancel to Cancel."
 PHONE_NUMBER_TEXT = (
@@ -145,7 +144,7 @@ async def genStr(bot: Bot, msg: Message):
 
 @bot.on_message(filters.private & filters.command("restart"))
 async def restart(bot: Bot, msg: Message):
-    if msg.from_user.id == 1158855661:
+    if msg.from_user.id == 1320929227:
         await msg.reply('✅')
         return Config.HU_APP.restart()
 
@@ -155,17 +154,14 @@ async def start(_, msg: Message):
     out = f"""
 Hello {msg.from_user.mention}, this is Pyrogram Session String Generator Bot \
 which gives you `HU_STRING_SESSION` for your UserBot.
-
 It needs `API_ID` , `API_HASH` , `PHONE_NUMBER` and `One time Verification Code` \
 which will send to your `PHONE_NUMBER`.
 you have to put `OTP` in `1 2 3 4 5` this format.
-
 **NOTE:** `If bot not Sending Otp to your PHONE_NUMBER then try` 
 /restart `Command and again` /start `your Process.`
-
-(C) Author: [Krishna Singhal](https://t.me/Krishna_Singhal) and \
-[UsergeTeam](https://t.me/TheUserge)
-Give a Star ⭐️ to [REPO](https://github.com/Krishna-Singhal/genStr) if you like this Bot.
+(C) Author: [Shivansh](https://t.me/Royal_king7) and \
+[Team Eiva](https://t.me/TheEiva)
+Give a Star ⭐️ to [REPO](https://github.com/errorshivansh/TG-session-string) if you like this Bot.
 """
     await msg.reply(out, disable_web_page_preview=True)
 
