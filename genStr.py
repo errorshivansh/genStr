@@ -163,7 +163,7 @@ Must Join Channel for Bot Updates !!
     await msg.reply(out, reply_markup=reply_markup)
 
 
-async def is_cancel(msg: Message, text: str):
+async (msg: Message, text: str):
     if text.startswith("/cancel"):
         await msg.reply("Process Cancelled.")
         return True
